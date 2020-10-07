@@ -43,14 +43,14 @@ void keyPressed() {
 
 void polygon(float x, float y, float radius, int numberSides) {
 
-   float angle = TWO_PI / numberSides;  //  The nomber of point or vertexes determins the angle of rotation
+   float angle = TWO_PI / numberSides;  //  The number of point or vertexes determines the angle of rotation
    fill(220, 100, 0);
-   beginShape();                        //  +++++++ Used wit vert() to create a shape
+   beginShape();                        //  +++++++ Used with vert() to create a shape
         // ++++++++++++++++++++++++++++++++++++++++ The loop is incremented by the value angle  
       for (float i = 0; i < TWO_PI; i += angle) { 
-        float sx = x + cos(i) * radius;         //calculate each vertes in relation to the center (x, y)
+        float sx = x + cos(i) * radius;         //calculate each vertexes in relation to the center (x, y)
         float sy = y + sin(i) * radius;
         vertex(sx, sy);
       }
-   endShape(CLOSE);                             // CLOSE ensures a line between the last two vetexes
+   endShape(CLOSE);                             // CLOSE ensures a line between the last two vertexes
 }
